@@ -1,0 +1,172 @@
+// Container
+html{
+   min-height: 100%;
+   position: relative;
+}
+
+.svg-import {
+    display: none;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $black-500;
+    line-height: 1.3;
+    background: url(../images/ecailles.png) 0 0 repeat;
+    padding-bottom: $spacing-6;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 1.875rem; line-height: 2.25rem; }
+h2 { font-size: 1.625rem; line-height: 1.935rem; }
+h3 { font-size: 1.375rem; line-height: 1.6875rem; }
+h4 { font-size: 1.125rem; line-height: 1.375rem; }
+h5 { font-size: 0.875rem; line-height: 1.0625rem; }
+h6 { font-size: 0.625rem; line-height: 0.75rem; }
+
+.container {
+    max-width: 960px;
+    padding-left: $spacing-4;
+    padding-right: $spacing-4;
+    margin: $spacing-5 auto;
+}
+
+.pulse-intro {
+    margin-bottom: $spacing-6;
+
+    h4 {
+        margin-bottom: $spacing-2;
+    }
+} 
+
+.pulse-card {
+    border-radius: $radius-normal;
+    box-shadow: 0 2px 2px rgba($black-500, 0.05), 0 3px 8px rgba($black-500, 0.1);
+    border: 1px solid $black-300;
+    min-height: 300px;
+    background-color: $white;
+}
+
+.pulse-wrapper {
+    padding: $spacing-5;
+}
+
+.pulse-privacy {
+    padding: $spacing-2;
+    background-color: $orange-secondary;
+    font-size: 0.75rem;
+    text-align: center;
+    border-top-left-radius: $radius-normal;
+    border-top-right-radius: $radius-normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        margin-right: $spacing-2;
+    }
+}
+
+.pulse-question {
+    margin-bottom: $spacing-6;
+}
+
+.question {
+    @extend h2;
+    text-align: center;
+    margin-bottom: $spacing-6;
+    margin-top: $spacing-4;
+}
+
+.answer-comment {
+    margin-bottom: $spacing-5;
+}
+
+.pulse-footer {
+    text-align: right;
+}
+
+.pulse-message {
+    text-align: center;
+}
+
+.message-item {
+    @extend h4;
+    margin-bottom: $spacing-5;
+}
+
+.helper-text {
+    color: $black-400;
+    font-size: 0.875rem;
+    font-weight: normal;
+    margin-top: $spacing-1;
+}
+
+.success-banner {
+    font-weight: 500;
+}
+
+footer {
+    position: absolute;
+    bottom: $spacing-4;
+    left:0;
+    right: 0;
+}
+
+.powered-by {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.primary-message, .secondary-message {
+    animation: slideIn 1s ease-in-out;      
+}
+
+.primary-message {
+    animation-delay: 0.5s;
+    padding-top: $spacing-4;
+
+    svg {
+        margin-bottom: $spacing-2;
+    }
+}
+
+.secondary-message {
+    animation-delay: 0.7s;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,$spacing-5,0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+@media only screen and (max-width: $tablet-breakpoint) {
+    .question {
+        font-size: 1.375rem; line-height: 1.6875rem;
+    }
+
+    .powered-by {
+        font-size: 0.625rem;
+    }
+}

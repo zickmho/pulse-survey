@@ -1,0 +1,126 @@
+.answer-buttons {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: $spacing-5;
+
+    &[data-buttons="2"] {
+        .pulse-item {
+            flex: none;
+            min-width: 200px;
+        }
+    }
+
+    &[data-buttons="6"], &[data-buttons="7"] {
+        .pulse-button {
+            flex-direction: column;  
+            justify-content: flex-start; 
+            text-align: center;
+            padding-left: $spacing-2;
+            padding-right: $spacing-2;
+            
+            &__icon {
+                margin-bottom: $spacing-1;
+                
+
+                svg {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.pulse-item {
+    margin-left: 0;
+    display: flex;
+    flex: 1;
+
+    input[type="radio"] {
+        display: none;
+
+        &:checked + .pulse-button {
+            background-color: $orange-primary;            
+        }
+    }
+
+    & + & {
+        margin-left: $spacing-1;
+    }   
+    
+}
+
+.pulse-button {
+    background-color: $black-100;
+    transition: .2s ease all;
+    border-radius: $radius-normal/2;
+    display: flex;
+    padding: $spacing-3;
+    font-weight: 500;
+    margin-left: 0;   
+    flex: 1;  
+    align-items: center;
+
+
+    &:hover {
+        background-color: $black-200;
+        cursor: pointer;
+    }
+
+    &__icon svg {
+        width: 28px;
+        height: 28px;
+        margin-right: $spacing-2;
+        display: block;
+        transform: scale(.9);
+    }
+}
+
+.pulse-button-primary {
+    background-color: $blue-secondary;
+    transition: .2s ease all;
+    cursor: pointer;
+    color: $white;
+    outline: 0;
+    border: 0;
+    border-radius: $radius-normal;
+    padding: $spacing-3 $spacing-5;  
+    
+    &:hover {
+        background-color: $blue-primary;
+    }
+
+    &[disabled] {
+        background-color: $black-300;
+        cursor: not-allowed;
+    }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+    .answer-buttons  {
+        flex-direction: column;
+    }
+
+    .pulse-button {
+        flex-direction: row !important;
+        padding-top: $spacing-2;
+        padding-bottom: $spacing-2;
+        
+
+        &__icon {
+            margin-bottom: 0 !important;
+
+            svg {
+                margin-right: $spacing-3 !important;
+            }
+        }
+    }
+
+    .pulse-item {
+        margin-left: 0 !important;
+    }
+
+}
