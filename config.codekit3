@@ -53,6 +53,19 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/images/brioHR-mark-color.png": {
+		"ft": 32768,
+		"iS": 111301,
+		"oA": 0,
+		"oAP": "/images/brioHR-mark-color.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
 	"/images/ecailles.png": {
 		"ft": 32768,
 		"iS": 266,
