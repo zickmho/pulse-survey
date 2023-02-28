@@ -132,12 +132,12 @@ footer {
 }
 
 .primary-message, .secondary-message {
-    animation: slideIn 1s ease-in-out;      
+    animation: slideIn cubic-bezier(0.39, 0.575, 0.565, 1) .5s normal both running;
 }
 
 .primary-message {
     animation-delay: 0.5s;
-    padding-top: $spacing-4;
+    padding-top: $spacing-4;   
 
     svg {
         margin-bottom: $spacing-2;
@@ -145,17 +145,18 @@ footer {
 }
 
 .secondary-message {
-    animation-delay: 0.7s;
+    animation-delay: 0.7s;   
 }
 
 @keyframes slideIn {
     0% {
         opacity: 0;
-        transform: translate3d(0,$spacing-5,0);
+        transform: translate3d(0,$spacing-6,0);
     }
 
     100% {
         opacity: 1;
+        visibility: visible;
         transform: translate3d(0,0,0);
     }
 }
