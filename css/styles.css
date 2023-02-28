@@ -85,8 +85,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -495,13 +494,11 @@ footer {
 }
 
 .primary-message, .secondary-message {
-  -webkit-animation: slideIn 1s ease-in-out;
-          animation: slideIn 1s ease-in-out;
+  animation: slideIn 1s ease-in-out;
 }
 
 .primary-message {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
   padding-top: 1rem;
 }
 .primary-message svg {
@@ -509,19 +506,7 @@ footer {
 }
 
 .secondary-message {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-@-webkit-keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 1.5rem, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+  animation-delay: 0.7s;
 }
 
 @keyframes slideIn {
@@ -645,6 +630,11 @@ footer {
 
   .pulse-item {
     margin-left: 0 !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .pulse-button-primary {
+    width: 100%;
   }
 }
 .asterisk {

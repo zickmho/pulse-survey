@@ -83,7 +83,7 @@
     background-color: $blue-secondary;
     transition: .2s ease all;
     cursor: pointer;
-    color: $white;
+    color: $white; 
     outline: 0;
     border: 0;
     border-radius: $radius-normal;
@@ -123,4 +123,13 @@
         margin-left: 0 !important;
     }
 
+}
+
+
+
+@media only screen and (max-width: $mobile-breakpoint) {
+
+    .pulse-button-primary {        
+        width: 100%;
+    }
 }

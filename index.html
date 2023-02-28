@@ -59,7 +59,7 @@
                             <!-- Display the data-buttons value according to how many answers are available. When the value is < 6 new layout will be called from CSS -->
                             <div class="answer-buttons" data-buttons="5">
                                 <div class="pulse-item">
-                                    <input type="radio" name="pulse_answer" id="very-dissatisfied"/>
+                                    <input type="radio" onclick="displayComment()" name="pulse_answer" id="very-dissatisfied"/>
                                     <label class="pulse-button" for="very-dissatisfied">
                                         <div class="pulse-button__icon">
                                             <svg>
@@ -70,7 +70,7 @@
                                     </label>                                    
                                 </div>    
                                 <div class="pulse-item">
-                                    <input type="radio" name="pulse_answer" id="dissatisfied">
+                                    <input type="radio" onclick="displayComment()" name="pulse_answer" id="dissatisfied">
                                     <label class="pulse-button" for="dissatisfied">
                                         <div class="pulse-button__icon">
                                             <svg>
@@ -81,7 +81,7 @@
                                     </label>                                    
                                 </div>                                  
                                 <div class="pulse-item">
-                                    <input type="radio" name="pulse_answer" id="neutral">
+                                    <input type="radio" onclick="displayComment()" name="pulse_answer" id="neutral">
                                     <label class="pulse-button" for="neutral">
                                         <div class="pulse-button__icon">
                                             <svg>
@@ -92,7 +92,7 @@
                                     </label>                                    
                                 </div>                                                              
                                 <div class="pulse-item">
-                                    <input type="radio" name="pulse_answer" id="satisfied">
+                                    <input type="radio" onclick="displayComment()" name="pulse_answer" id="satisfied">
                                     <label class="pulse-button" for="satisfied">
                                         <div class="pulse-button__icon">
                                             <svg>
@@ -103,7 +103,7 @@
                                     </label>                                    
                                 </div>
                                 <div class="pulse-item">
-                                    <input type="radio" name="pulse_answer" id="very-satisfied">
+                                    <input type="radio" onclick="displayComment()" name="pulse_answer" id="very-satisfied">
                                     <label class="pulse-button" for="very-satisfied">
                                         <div class="pulse-button__icon">
                                             <svg>
@@ -114,16 +114,16 @@
                                     </label>                                    
                                 </div>                          
                             </div>
-                            <div class="answer-comment">
+                            <div id="answer-comment" class="answer-comment" style="display:none;">
                                 <label for="explanation">Please provide a brief explanation or examples of why you gave this rating <span class="asterisk">*</span></label>
                                 <!-- Add classname .has-error when input has error -->
-                                <textarea class="" name="explanation" rows="6"></textarea>
+                                <textarea class="" id="textarea" name="explanation" rows="6"></textarea>
                                 <div class="error-message">This field is required</div>
                             </div>                    
                         </div>
-                        <div class="pulse-footer">
+                        <div id="submit-button" class="pulse-footer" style="display: none;">
                             <!-- Add disabled attribute when form is valid is currently submitted -->
-                            <button type="submit" disabled class="pulse-button-primary">Submit</button>
+                            <button type="submit" class="pulse-button-primary">Submit</button>
                         </div>
                     </div>                    
                 </form>
@@ -139,5 +139,12 @@
             </a>
         </div>        
     </footer>
+    <script>
+        function displayComment() {
+            document.getElementById('answer-comment').style.display = 'block';
+            document.getElementById('submit-button').style.display = 'block';            
+            document.getElementById('textarea').focus();                                
+        }
+    </script>
 </body>
 </html>
